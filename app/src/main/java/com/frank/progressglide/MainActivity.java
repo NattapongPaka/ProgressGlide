@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         //960 × 533 pixels,25059 bytes
         Glide.with(this)
                 .using(new ProgressModelLoader(mainActivityHandler))
-                .load("http://inthecheesefactory.com/uploads/source/nestedfragment/fragments.png")
+                .load("http://www.noaanews.noaa.gov/stories/images/goes-12%2Dfirstimage-large081701.jpg")
                 .into(iv_0);
     }
 

@@ -29,6 +29,7 @@ public class ProgressDataFetcher implements DataFetcher<InputStream> {
     private Call progressCall;
     private InputStream stream;
     private volatile boolean isCancelled;
+    private ProgressListener progressListener;
 
     public ProgressDataFetcher(String url, Handler handler) {
         this.url = url;
