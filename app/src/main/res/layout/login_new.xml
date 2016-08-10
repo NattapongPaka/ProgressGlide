@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Login">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/applogo"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+            app:layout_constraintRight_toRightOf="@+id/layout_main"
+            app:layout_constraintTop_toTopOf="@+id/layout_main" />
+
+        <TextView
+            android:id="@+id/sloganTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Slogan Company"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+            app:layout_constraintRight_toRightOf="@+id/layout_main"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/usernameEditText_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="50dp"
+            app:hintTextAppearance="@style/StyleTextInputLayout"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+            app:layout_constraintRight_toRightOf="@+id/layout_main"
+            app:layout_constraintTop_toBottomOf="@+id/sloganTextView">
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="email"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+                app:layout_constraintRight_toRightOf="@+id/layout_main" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/white"
+            android:contentDescription="@string/btnSignIn"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+            app:layout_constraintRight_toRightOf="@+id/layout_main"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEditText_widget" />
+
+        <TextView
+            android:id="@+id/poweredTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="powered by getConnected"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_main"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+            app:layout_constraintRight_toRightOf="@+id/layout_main"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn"
+            app:layout_constraintVertical_bias="0.65" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/passwordEditText_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="15dp"
+            app:hintTextAppearance="@style/StyleTextInputLayout"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+            app:layout_constraintRight_toRightOf="@+id/layout_main"
+            app:layout_constraintTop_toBottomOf="@+id/usernameEditText_widget">
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+                app:layout_constraintRight_toRightOf="@+id/layout_main" />
+        </android.support.design.widget.TextInputLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

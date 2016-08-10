@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/viewEmpty"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dip"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            android:background="@drawable/custom_borders">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/icon_newalbum"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/groupd_icon_newalbum" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Create a New Album"
+                android:id="@+id/textView10"
+                android:textColor="#CCCCCC"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Organize your shared media files with albums"
+                android:id="@+id/textView11"
+                android:textColor="#CCCCCC"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+        <!--LinearLayout
+            android:id="@+id/showLoading"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:animateLayoutChanges="true"
+            android:gravity="center_vertical|center_horizontal|center">
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:gravity="center"
+                android:id="@+id/arc_progress1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:arc_progress="0"
+                custom:arc_finished_color="@color/primary"
+                app:arc_bottom_text="Uploading.." />
+        </LinearLayout-->
+        <ListView
+            android:id="@+id/list_photo_albums"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:headerDividersEnabled="false"></ListView>
+
+    </LinearLayout>
+
+    <!--com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_my_library_add_white_24dp"
+        fab:fab_colorNormal="@color/primary"
+        fab:fab_colorPressed="@color/primary_dark"
+        fab:fab_colorRipple="@color/primary_dark" /-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/ic_my_library_add_white_24dp"
+        android:layout_marginBottom="@dimen/codelab_fab_margin_bottom"
+        android:layout_marginRight="@dimen/codelab_fab_margin_right"
+        android:elevation="4dp"
+        fab:fabSize="normal" />
+
+</FrameLayout>
+

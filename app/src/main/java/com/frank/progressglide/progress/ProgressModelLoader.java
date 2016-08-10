@@ -14,11 +14,16 @@ import java.io.InputStream;
 
 public class ProgressModelLoader implements StreamModelLoader<String> {
 
-    private final ModelCache<String, String> modelCache;
-    private final Handler handler;
+    private ModelCache<String, String> modelCache;
+    private Handler handler;
+    private ProgressListener progressListener;
 
     public ProgressModelLoader(Handler handler) {
         this(null, handler);
+    }
+
+    public ProgressModelLoader(ProgressListener progressListener) {
+        this.progressListener = progressListener;
     }
 
     public ProgressModelLoader(ModelCache<String, String> modelCache) {
@@ -29,7 +34,6 @@ public class ProgressModelLoader implements StreamModelLoader<String> {
         this.modelCache = modelCache;
         this.handler = handler;
     }
-
 
     @Override
     public DataFetcher<InputStream> getResourceFetcher(String model, int width, int height) {
@@ -43,7 +47,8 @@ public class ProgressModelLoader implements StreamModelLoader<String> {
                 modelCache.put(model, width, height, result);
             }
         }
-        return new ProgressDataFetcher(result, handler);
+        //return new ProgressDataFetcher(result, handler);
+        return new ProgressDataFetcher(result,progressListener);
     }
 
     public static class Factory implements ModelLoaderFactory<String, InputStream> {

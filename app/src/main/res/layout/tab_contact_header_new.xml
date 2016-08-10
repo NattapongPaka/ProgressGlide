@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#dddddd"
+    android:id="@+id/layout_main">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@color/primary"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintRight_toRightOf="@+id/layout_main"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfileBlurred" />
+    <ImageView
+        android:id="@+id/userProfileBlurred"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/ly_trapezoid"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toTopOf="@+id/layout_main"
+        app:layout_constraintRight_toRightOf="@+id/layout_main" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTACTS"
+        android:fontFamily="sans-serif"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/layout_main"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/statContactsNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19"
+        android:fontFamily="@string/font_fontFamily_medium"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GROUPS"
+        android:fontFamily="sans-serif"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toRightOf="@+id/statContactsNumber"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/statGroupNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:fontFamily="@string/font_fontFamily_medium"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/textView4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@+id/statContactsNumber" />
+
+    <ImageView
+        android:id="@+id/profileImageShadow"
+        android:layout_width="159dp"
+        android:layout_height="159dp"
+        android:src="@drawable/ly_profile_dropshadow_120"
+        app:layout_constraintLeft_toLeftOf="@+id/profileImage"
+        app:layout_constraintTop_toTopOf="@+id/profileImage"
+        android:layout_marginTop="19dp"
+        app:layout_constraintRight_toRightOf="@+id/profileImage"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImage" />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/contacts_defaultuserimg"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@+id/statContactsNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/profileTitle"
+        app:layout_constraintVertical_bias="1.15" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/contact_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit_white"
+        app:backgroundTint="#505053"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:layout_constraintLeft_toLeftOf="@+id/statGroupNumber"
+        app:layout_constraintTop_toTopOf="@+id/statContactsNumber"
+        app:layout_constraintRight_toRightOf="@+id/layout_main"
+        app:layout_constraintBottom_toTopOf="@+id/profileTitle" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="Tareef Jafferi"
+        android:fontFamily="sans-serif"
+        android:ellipsize="end"
+        android:textColor="#222222"
+        android:textSize="20sp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        app:layout_constraintLeft_toRightOf="@+id/profileImage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@+id/userProfileBlurred"
+        app:layout_constraintRight_toRightOf="@+id/layout_main"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfileBlurred"
+        app:layout_constraintVertical_bias="0.73" />
+
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileName"
+        android:text="PROJECT MANAGER"
+        android:fontFamily="sans-serif"
+        android:textColor="#888888"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:textAllCaps="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        app:layout_constraintLeft_toLeftOf="@+id/profileName"
+        app:layout_constraintTop_toBottomOf="@+id/profileName"
+        app:layout_constraintRight_toRightOf="@+id/profileName" />
+
+
+</android.support.constraint.ConstraintLayout>

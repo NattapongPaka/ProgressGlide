@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd">
+
+<android.support.constraint.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_main">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintRight_toRightOf="@+id/layout_main" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@color/primary"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintRight_toRightOf="@+id/layout_main"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfileBlurred" />
+
+    <ImageView
+        android:id="@+id/userProfileBlurred"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/ly_trapezoid2"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintRight_toRightOf="@+id/layout_main"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+
+
+    <ImageView
+        android:id="@+id/profileImageShadow"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/ly_profile_dropshadow"
+        app:layout_constraintLeft_toLeftOf="@+id/profileImage"
+        app:layout_constraintTop_toTopOf="@+id/profileImage"
+        android:layout_marginTop="15dp"
+        app:layout_constraintRight_toRightOf="@+id/profileImage"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImage" />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/contacts_defaultuserimg"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
+        app:layout_constraintTop_toTopOf="@+id/userProfileBlurred"
+        app:layout_constraintBottom_toBottomOf="@+id/profileTitle"
+        app:layout_constraintVertical_bias="0.9">
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintRight_toRightOf="@+id/layout_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/newPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_camera"
+        app:backgroundTint="#505053"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toTopOf="@+id/userProfileBlurred"
+        app:layout_constraintRight_toRightOf="@+id/layout_main"
+        app:layout_constraintHorizontal_bias="0.8" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileImage"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Tareef Jafferi"
+        android:fontFamily="sans-serif"
+        android:textColor="#222222"
+        android:textSize="20sp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        app:layout_constraintLeft_toRightOf="@+id/profileImage"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@+id/userProfileBlurred"
+        app:layout_constraintRight_toRightOf="@+id/layout_main"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfileBlurred"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="PROJECT MANAGER"
+        android:fontFamily="sans-serif"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:textAllCaps="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        app:layout_constraintLeft_toLeftOf="@+id/profileName"
+        app:layout_constraintTop_toBottomOf="@+id/profileName"
+        app:layout_constraintRight_toRightOf="@+id/layout_main" />
+
+    <HorizontalScrollView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/skillScroll"
+        android:background="#dddddd"
+        android:scrollbars="none"
+        android:padding="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintRight_toRightOf="@+id/layout_main"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfileBlurred"></HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="NAME"
+        style="@style/HeadTextRow2"
+        android:fontFamily="@string/font_fontFamily_medium"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileBlurred"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/nameInputRow"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:background="@drawable/textinput_long"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#464646"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="TITLE"
+        style="@style/HeadTextRow2"
+        android:fontFamily="@string/font_fontFamily_medium"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputRow"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/titleTitleRow"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:background="@drawable/textinput_long"
+        android:textColor="#464646"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/phoneHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="PHONE"
+        style="@style/HeadTextRow2"
+        android:fontFamily="@string/font_fontFamily_medium"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleTitleRow"
+        android:layout_marginTop="10dp" />
+
+    <dev.getconnectedapp.com.ProfileEditPhone
+        android:id="@+id/list_edit_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toBottomOf="@+id/phoneHeader"></dev.getconnectedapp.com.ProfileEditPhone>
+
+    <ImageView
+        android:id="@+id/imgAddPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/plus"
+        android:cropToPadding="false"
+        android:scaleType="fitStart"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/list_edit_phone"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/plusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD NEW CONTACT NUMBER"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/imgAddPhone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@+id/imgAddPhone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAddPhone" />
+
+    <TextView
+        android:id="@+id/emailHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAIL ADDRESSES"
+        style="@style/HeadTextRow2"
+        android:fontFamily="@string/font_fontFamily_medium"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgAddPhone"
+        android:layout_marginTop="10dp" />
+
+    <dev.getconnectedapp.com.ProfileEditEmail
+        android:id="@+id/list_edit_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailHeader"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toBottomOf="@+id/emailHeader"></dev.getconnectedapp.com.ProfileEditEmail>
+
+    <ImageView
+        android:id="@+id/imgAddEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/plus"
+        android:scaleType="fitStart"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/list_edit_email"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD NEW EMAIL"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/imgAddEmail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@+id/imgAddEmail"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAddEmail" />
+
+    <TextView
+        android:id="@+id/instantHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INSTANT MESSENGER"
+        style="@style/HeadTextRow2"
+        android:fontFamily="@string/font_fontFamily_medium"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginTop="10dp" />
+
+    <dev.getconnectedapp.com.ProfileEditInstant
+        android:id="@+id/list_edit_instant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toBottomOf="@+id/instantHeader"></dev.getconnectedapp.com.ProfileEditInstant>
+
+    <ImageView
+        android:id="@+id/imgAddInstant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/plus"
+        android:scaleType="fitStart"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/list_edit_instant"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD NEW INSTANT MESSENGER"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/imgAddInstant"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@+id/imgAddInstant"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAddInstant" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_main"
+        app:layout_constraintTop_toBottomOf="@+id/imgAddInstant"
+        app:layout_constraintRight_toRightOf="@+id/layout_main" />
+</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/_linear_grid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:visibility="gone"
+        android:id="@+id/myGridDrive"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#eeeeee"
+        android:verticalSpacing="6dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+
+</LinearLayout>

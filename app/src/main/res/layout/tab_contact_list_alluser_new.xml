@@ -1,0 +1,109 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="53dp"
+    android:clickable="true"
+    android:weightSum="1"
+    android:baselineAligned="true"
+    android:id="@+id/row_user"
+    android:background="#FFFFFF">
+
+    <!--  ListRow Left sided Thumbnail image -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Id"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:id="@+id/imageView2"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/imageViewLine"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#DDDDDD" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:fontFamily="@string/font_fontFamily_medium"
+            android:text="Alexander Krov"
+            android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp"
+            android:ellipsize="end"
+            android:maxWidth="260dp"
+            style="@style/HeadTextRow"/>
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginRight="56dp"
+            android:fontFamily="@string/font_fontFamily_medium"
+            android:textSize="12sp"
+            android:text="Programmer"
+            android:textColor="#b8b8b8"
+            android:textAllCaps="true"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/defaultuserimg_sq" />
+
+        <ImageView
+            android:id="@+id/chatIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chat"
+            android:layout_marginTop="15dp"
+            android:adjustViewBounds="false"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="6"
+            android:id="@+id/buble"
+            android:background="@drawable/company_color_borderradius"
+            android:layout_gravity="end"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp" />
+
+    </FrameLayout>
+
+</TableRow>

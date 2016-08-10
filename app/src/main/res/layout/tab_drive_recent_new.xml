@@ -1,0 +1,94 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="57dip"
+    android:clickable="true"
+    android:weightSum="1"
+    android:baselineAligned="false"
+    android:id="@+id/preview">
+
+    <!--  ListRow Left sided Thumbnail image -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="54dp"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:typeface="sans"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:text="Alexander Recent"
+            android:layout_marginLeft="56dp"
+            android:ellipsize="end"
+            android:maxWidth="200dip"
+            style="@style/HeadTextRow"/>
+
+        <TextView
+            android:id="@+id/fileDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:layout_marginLeft="56dp"
+            android:layout_toLeftOf="@+id/createdate"
+            android:layout_toStartOf="@+id/createdate"
+            android:text="Hey! Are you there? I need"
+            style="@style/TitleTextRow"/>
+
+        <ImageView
+            android:id="@+id/fileThumb"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/defaultuserimg_sq" />
+
+        <ImageView
+            android:id="@+id/fileThumbColor"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:background="#30000000" />
+
+        <ImageView
+            android:id="@+id/fileIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_document"
+            android:adjustViewBounds="false"
+            android:background="#FFFFFF"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="PNG"
+            android:id="@+id/fileExtension"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp"
+            android:fontFamily="sans-serif-light" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/imageViewLine"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#DDDDDD" />
+
+    </FrameLayout>
+
+</TableRow>

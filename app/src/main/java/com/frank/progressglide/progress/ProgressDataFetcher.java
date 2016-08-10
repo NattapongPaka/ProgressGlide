@@ -24,16 +24,21 @@ public class ProgressDataFetcher implements DataFetcher<InputStream> {
 
     private static final String TAG = "ProgressDataFetcher";
 
-    private final String url;
-    private final Handler handler;
+    private String url;
+    private Handler handler;
     private Call progressCall;
     private InputStream stream;
     private volatile boolean isCancelled;
-    private ProgressListener progressListener;
+    private ProgressListener mProgressListener;
 
     public ProgressDataFetcher(String url, Handler handler) {
         this.url = url;
         this.handler = handler;
+    }
+
+    public ProgressDataFetcher(String url,ProgressListener progressListener){
+        this.url = url;
+        this.mProgressListener = progressListener;
     }
 
     @Override
@@ -41,28 +46,28 @@ public class ProgressDataFetcher implements DataFetcher<InputStream> {
         Request request = new Request.Builder()
                 .url(url)
                 .build();
-        final ProgressListener progressListener = new ProgressListener() {
 
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-                Log.e(TAG, bytesRead + "," + contentLength + done);
-                if (handler != null) {
-                    Message message = handler.obtainMessage();
-                    message.what = 1;
-                    message.arg1 = (int)bytesRead;
-                    message.arg2 = (int)contentLength;
-                    handler.sendMessage(message);
-                }
-            }
-        };
+//        final ProgressListener progressListener = new ProgressListener() {
+//            @Override
+//            public void update(long bytesRead, long contentLength, boolean done) {
+//                Log.e(TAG, bytesRead + "," + contentLength + done);
+//                if (handler != null) {
+//                    Message message = handler.obtainMessage();
+//                    message.what = 1;
+//                    message.arg1 = (int)bytesRead;
+//                    message.arg2 = (int)contentLength;
+//                    handler.sendMessage(message);
+//                }
+//            }
+//        };
+//
         OkHttpClient client = new OkHttpClient.Builder()
                 .addNetworkInterceptor(new Interceptor() {
-
                     @Override
                     public Response intercept(Chain chain) throws IOException {
                         Response originalResponse = chain.proceed(chain.request());
                         return originalResponse.newBuilder()
-                                .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                                .body(new ProgressResponseBody(originalResponse.body(), mProgressListener))
                                 .build();
                     }
                 })

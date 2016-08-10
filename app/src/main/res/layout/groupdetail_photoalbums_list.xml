@@ -1,0 +1,138 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_marginTop="15dip"
+    android:paddingTop="40dp">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:id="@+id/albumcover"
+            android:src="@drawable/wallpaper2"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="115dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/groupd_album_rowbg"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="100dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/fileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:typeface="sans"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="19dip"
+                    android:maxLines="1"
+                    android:text="Coming Soon"
+                    android:ellipsize="end"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/fileDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_gray"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        android:text="Created by Technical Lead"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/moddate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CCCCCC"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        android:text="September 10, 2015"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="4dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:visibility="gone"
+            android:id="@+id/progress_wheel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center_horizontal"
+            wheel:matProg_barColor="@color/text_gray"
+            wheel:matProg_progressIndeterminate="false" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/relativeLayout4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/company_color_circularcontainer"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/icon_status"
+                android:src="@drawable/ic_cloud_upload_white_24dp"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:id="@+id/textView19"
+                android:textSize="20sp"
+                android:layout_alignParentTop="false"
+                android:textColor="@color/text_primary"
+                android:textStyle="normal"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+
+</FrameLayout>
+</TableRow>

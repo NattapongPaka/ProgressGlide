@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/grid_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/contacts_defaultuserimg_sq">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/grid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="11sp"
+        android:text="Jeremie T."
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/text_darkgray"
+        android:maxLines="1"
+        android:longClickable="false"
+        android:singleLine="true"
+        android:ellipsize="end">
+    </TextView>
+
+</LinearLayout>
