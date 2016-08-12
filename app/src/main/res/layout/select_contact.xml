@@ -57,18 +57,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/userTagScroll"
-        android:layout_below="@+id/searchContainer"></HorizontalScrollView>
+        android:layout_below="@+id/searchContainer" />
 
 
-
-            <ListView
-                android:id="@+id/list_contacts_all"
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/headUserAll"
-                android:background="#FFFFFF"
-                android:orientation="vertical"></ListView>
+    <ListView
+        android:id="@+id/list_contacts_all"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/headUserAll"
+        android:background="#FFFFFF"
+        android:orientation="vertical" />
 
 
 

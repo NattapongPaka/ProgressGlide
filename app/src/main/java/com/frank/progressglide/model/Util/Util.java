@@ -1,4 +1,4 @@
-package com.frank.progressglide.model.Util;
+package com.frank.progressglide.model.util;
 
 /**
  * Created by Noth on 10/8/2559.

@@ -2,6 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <ListView
         android:id="@+id/list_users"
         android:layout_width="match_parent"
@@ -9,5 +10,5 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:divider="#f7412d"
-        android:dividerHeight="0dp"></ListView>
+        android:dividerHeight="0dp" />
 </LinearLayout>

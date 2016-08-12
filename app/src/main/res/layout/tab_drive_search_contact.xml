@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:background="#FFFFFF"
-                    android:orientation="vertical"></dev.getconnectedapp.com.ListSenderFileDetail>
+                    android:orientation="vertical" />
 
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>

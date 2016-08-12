@@ -113,7 +113,7 @@
                         android:layout_width="246dp"
                         android:layout_height="34dp"
                         android:background="@drawable/button_default_bg"
-                        android:layout_gravity="center_horizontal"></FrameLayout>
+                        android:layout_gravity="center_horizontal" />
 
                     <ImageButton
                         android:layout_width="250dp"

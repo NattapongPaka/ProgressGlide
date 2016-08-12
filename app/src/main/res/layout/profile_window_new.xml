@@ -172,7 +172,7 @@
         app:layout_constraintLeft_toLeftOf="@+id/layout_main"
         app:layout_constraintRight_toRightOf="@+id/layout_main"
         app:layout_constraintBottom_toBottomOf="@+id/userProfileBlurred"
-        android:layout_marginBottom="5dp"></HorizontalScrollView>
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:id="@+id/textView7"

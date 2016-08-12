@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="110dip"
-                    android:id="@+id/space2"></Space>
+                    android:id="@+id/space2" />
 
                 <ImageView
                     android:id="@+id/defaultbg"
@@ -49,7 +49,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:background="@color/primary"
-                    android:alpha="0.6"></FrameLayout>
+                    android:alpha="0.6" />
 
                 <ImageView
                     android:id="@+id/userProfileBlurred"
@@ -145,7 +145,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_toRightOf="@+id/imageView2"
                     android:orientation="vertical"
-                    android:id="@+id/linearLayout"></LinearLayout>
+                    android:id="@+id/linearLayout" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout1"
@@ -154,7 +154,7 @@
                     android:layout_alignTop="@+id/imageView2"
                     android:layout_marginRight="40dp"
                     android:layout_toLeftOf="@+id/imageView2"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical" />
 
 
                 <TextView
@@ -190,7 +190,7 @@
                         <TabWidget
                             android:id="@android:id/tabs"
                             android:layout_width="match_parent"
-                            android:layout_height="40dip"></TabWidget>
+                            android:layout_height="40dip" />
 
                         <FrameLayout
                             android:id="@android:id/tabcontent"
@@ -210,14 +210,14 @@
                                     android:layout_alignParentLeft="true"
                                     android:layout_below="@+id/textView7"
                                     android:background="#FFFFFF"
-                                    android:orientation="vertical"></dev.getconnectedapp.com.ListContactsGroupDetails>
+                                    android:orientation="vertical" />
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/groupAlbums"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical"></LinearLayout>
+                                android:orientation="vertical" />
 
                         </FrameLayout>
                     </LinearLayout>

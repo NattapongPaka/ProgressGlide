@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".activity.Example1">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:scrollbars="vertical"
+    <FrameLayout
+        android:id="@+id/frameLayoutExample1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageViewExample1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/appicon" />
+    </FrameLayout>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        wheel:matProg_linearProgress="true"
+        wheel:matProg_circleRadius="80dp"
+        wheel:matProg_barWidth="2dp"
+        wheel:matProg_rimWidth="2dp"
+        wheel:matProg_rimColor="#AA757575"
+        wheel:matProg_barColor="#BDBDBD"
+        wheel:matProg_progressIndeterminate="false" />
+
+    <ImageButton
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_grey_600_48dp"
+        android:background="@android:color/transparent"/>
+
+    <!--<FrameLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/frameLayoutProgress"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:visibility="visible"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<com.dmitrymalkovich.android.ProgressFloatingActionButton-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="56dp"-->
+    <!--android:layout_height="56dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:clickable="true">-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:layout_width="56dp"-->
+    <!--android:layout_height="56dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:src="@drawable/ic_close_green_a700_18dp" />-->
+
+    <!--<ProgressBar-->
+    <!--android:max="100"-->
+    <!--android:id="@+id/progressBarExample1"-->
+    <!--style="@style/Widget.AppCompat.ProgressBar"-->
+    <!--android:indeterminate="true"-->
+    <!--android:layout_width="56dp"-->
+    <!--android:layout_height="56dp"-->
+    <!--android:layout_gravity="center" />-->
+
+    <!--</com.dmitrymalkovich.android.ProgressFloatingActionButton>-->
+    <!--</FrameLayout>-->
+
+</RelativeLayout>

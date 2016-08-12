@@ -26,7 +26,7 @@
             android:listSelector="@null"
             android:verticalSpacing="3dp"
             android:horizontalSpacing="3dp"
-            tools:listitem="@layout/gallery_item"></GridView>
+            tools:listitem="@layout/gallery_item" />
 
         <FrameLayout
             android:id="@+id/frameSelectCount"

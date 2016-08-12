@@ -198,11 +198,11 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="56dp"
-            android:background="#DDDDDD"></FrameLayout>
+            android:background="#DDDDDD" />
 
 
-
-        <include layout="@layout/chat_list_sticker"
+        <include
+            layout="@layout/chat_list_sticker"
             android:layout_width="wrap_content"
             android:layout_height="180dp"
             android:layout_below="@+id/imageView"
@@ -210,7 +210,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="51dp"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"></include>
+            android:layout_alignParentEnd="true" />
 
         <FrameLayout
             android:layout_width="match_parent"

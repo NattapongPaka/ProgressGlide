@@ -72,7 +72,7 @@
                 android:id="@+id/border"
                 android:background="#DDDDDD" />
 
-            <include layout="@layout/tr_comment_container"></include>
+            <include layout="@layout/tr_comment_container" />
 
             <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/row_comment">
 
-                    <include layout="@layout/tr_comment"></include>
+                    <include layout="@layout/tr_comment" />
                 </TableLayout>
             </android.support.v4.widget.NestedScrollView>
 

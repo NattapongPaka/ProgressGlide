@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="170dp"
-                    android:id="@+id/space2"></Space>
+                    android:id="@+id/space2" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -126,7 +126,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_toRightOf="@+id/imageView2"
                     android:orientation="vertical"
-                    android:id="@+id/linearLayout"></LinearLayout>
+                    android:id="@+id/linearLayout" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout1"
@@ -135,7 +135,7 @@
                     android:layout_alignTop="@+id/imageView2"
                     android:layout_marginRight="40dp"
                     android:layout_toLeftOf="@+id/imageView2"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical" />
 
 
                 <TextView
@@ -163,7 +163,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_below="@+id/textView7"
                     android:background="#FFFFFF"
-                    android:orientation="vertical"></dev.getconnectedapp.com.ListContactsGroupDetails>
+                    android:orientation="vertical" />
 
             </RelativeLayout>
         </LinearLayout>

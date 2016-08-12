@@ -80,7 +80,7 @@
             android:cacheColorHint="@android:color/transparent"
             android:divider="@null"
             android:dividerHeight="0dp"
-            android:headerDividersEnabled="false"></ListView>
+            android:headerDividersEnabled="false" />
 
     </LinearLayout>
 

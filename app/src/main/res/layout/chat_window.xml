@@ -27,7 +27,7 @@
                 android:visibility="invisible"
                 android:layout_marginBottom="45dip" />
 
-            <include layout="@layout/chat_window_loading"></include>
+            <include layout="@layout/chat_window_loading" />
 
 
             <ListView
@@ -43,7 +43,7 @@
                 android:clipToPadding="false"
                 android:divider="@null"
                 android:dividerHeight="0dp"
-                android:listSelector="@android:color/transparent"></ListView>
+                android:listSelector="@android:color/transparent" />
 
 
         </FrameLayout>
@@ -57,7 +57,7 @@
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_gravity="top">
 
-        <include layout="@layout/chat_pubnub"></include>
+        <include layout="@layout/chat_pubnub" />
 
     </FrameLayout>
 
@@ -76,7 +76,7 @@
         android:alpha=".36"
         android:id="@+id/chatoverlay"
         android:visibility="gone"
-        android:layout_marginTop="?attr/actionBarSize"></FrameLayout>
+        android:layout_marginTop="?attr/actionBarSize" />
 
     <GridView
         android:id="@+id/myGridMenu"

@@ -2,7 +2,8 @@
 <resources>
     <string name="btnSignIn">loginButton</string>
     <string name="new_messages">NEW MESSAGES</string>
-    <string name="key1"></string> <string name="key2"></string>
+    <string name="key1" /> 
+    <string name="key2" />
     <string name="settings">ตั้งค่า</string>
     <string name="albums_name_failed_message_invalid">โปรดระบบชื่ออัลบั้ม</string>
     <string name="albums_select_image_failed">โปรดระบุรูป</string>

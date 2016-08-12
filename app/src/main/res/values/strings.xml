@@ -12,7 +12,8 @@
     <string name="username_failed_message_invalid">Please enter your username</string>
     <string name="password_failed_message_invalid">Please enter your password</string>
     <string name="recheck_forward">Please select data to forward</string>
-    <string name="key1"></string> <string name="key2"></string>
+    <string name="key1" /> 
+    <string name="key2" />
     <string name="contacts">Contacts</string>
     <string name="chats">Chats</string>
     <string name="messages">Messages</string>

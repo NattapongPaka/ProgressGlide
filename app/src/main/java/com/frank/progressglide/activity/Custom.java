@@ -44,14 +44,13 @@ public class Custom extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        progressWheel = new ProgressWheel(this);
-        frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
-        image = (ImageView) findViewById(R.id.iv_0);
-        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
-        progressTextView = (TextView) findViewById(R.id.progress_text_view);
+//        progressWheel = new ProgressWheel(this);
+//        frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
+//        image = (ImageView) findViewById(R.id.iv_0);
+//        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+//        progressTextView = (TextView) findViewById(R.id.progress_text_view);
 
-        FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.WRAP_CONTENT,FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER);
+        FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER);
         frameLayout.addView(progressWheel, layoutParams);
 
         mOkHttpClient = new OkHttpClient().newBuilder();
