@@ -1,17 +1,26 @@
 package com.frank.progressglide.activity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.ActionMenuItemView;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.Request;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SizeReadyCallback;
+import com.bumptech.glide.request.target.Target;
 import com.frank.progressglide.R;
 import com.frank.progressglide.model.ConfigSingleton;
 import com.frank.progressglide.progress.ProgressListener;
@@ -28,6 +37,7 @@ import timber.log.Timber;
 
 public class Example1 extends AppCompatActivity {
 
+    private FloatingActionButton floatingActionButton;
     private ImageView imageView;
     private FrameLayout frameLayout;
     private String group_id = "5779efbe42f92e81712bfa83";
@@ -43,6 +53,7 @@ public class Example1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.example1);
 
+        floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
         imageView = (ImageView) findViewById(R.id.imageViewExample1);
         frameLayout = (FrameLayout) findViewById(R.id.frameLayoutExample1);
         progress_wheel = (ProgressWheel) findViewById(R.id.progress_wheel);
@@ -72,16 +83,24 @@ public class Example1 extends AppCompatActivity {
             }
         };
 
-        Glide.with(this)
+        final Target<GlideDrawable> target = Glide.with(this)
                 .using(new ProgressModelLoader(progressListener))
-                .load("http://www.planwallpaper.com/static/images/techno_wallpaper_2_0_hd_by_gredius-d5o48do.jpg")
-                .placeholder(ContextCompat.getDrawable(this,R.drawable.appicon))
-                .error(ContextCompat.getDrawable(this,R.drawable.ic_error))
+                .load("https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-6.jpg")
+                .placeholder(ContextCompat.getDrawable(this, R.drawable.appicon))
+                .error(ContextCompat.getDrawable(this, R.drawable.ic_error))
                 // Disabling cache to see download progress with every app load
                 // You may want to enable caching again in production
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(imageView);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
+
 
 //    private void getLoadChat(){
 //        Call<JsonChatResponse> call = HttpManager.getInstatance().getService().getLoadChatsThread(ConfigSingleton.getInstantce().getCompany_id(), group_id, finalCreatedate, ConfigSingleton.getInstantce().getUser_id());

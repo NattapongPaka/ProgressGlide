@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        wheel:matProg_barColor="#BDBDBD"
+        wheel:matProg_barWidth="2dp"
+        wheel:matProg_circleRadius="80dp"
+        wheel:matProg_linearProgress="true"
+        wheel:matProg_progressIndeterminate="false"
+        wheel:matProg_rimColor="#AA757575"
+        wheel:matProg_rimWidth="2dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:src="@drawable/ic_close_grey_600_48dp"
+        fab:backgroundTint="#AAFFFFFF"
+        fab:fabSize="normal"
+        fab:rippleColor="@color/black" />
+
+</android.support.design.widget.CoordinatorLayout>
