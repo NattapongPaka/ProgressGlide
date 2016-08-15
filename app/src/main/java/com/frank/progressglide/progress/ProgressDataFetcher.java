@@ -59,20 +59,36 @@ public class ProgressDataFetcher implements DataFetcher<InputStream> {
 //            }
 //        };
 //
-        OkHttpClient client = new OkHttpClient.Builder()
-                .followSslRedirects(true)
-                .followRedirects(true)
-                .retryOnConnectionFailure(false)
-                .addNetworkInterceptor(new Interceptor() {
-                    @Override
-                    public Response intercept(Chain chain) throws IOException {
-                        Response originalResponse = chain.proceed(chain.request());
-                        return originalResponse.newBuilder()
+
+//        OkHttpClient client = new OkHttpClient.Builder()
+//                .followSslRedirects(true)
+//                .followRedirects(true)
+//                .retryOnConnectionFailure(false)
+//                .addNetworkInterceptor(new Interceptor() {
+//                    @Override
+//                    public Response intercept(Chain chain) throws IOException {
+//                        Response originalResponse = chain.proceed(chain.request());
+//                        return originalResponse.newBuilder()
+//                                .body(new ProgressResponseBody(originalResponse.body(), mProgressListener))
+//                                .build();
+//                    }
+//                })
+//                .build();
+
+        OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
+        okBuilder.followRedirects(true);
+        okBuilder.followSslRedirects(true);
+        okBuilder.addNetworkInterceptor(new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+                Response originalResponse = chain.proceed(chain.request());
+                return originalResponse.newBuilder()
                                 .body(new ProgressResponseBody(originalResponse.body(), mProgressListener))
                                 .build();
-                    }
-                })
-                .build();
+            }
+        });
+        OkHttpClient client = okBuilder.build();
+
         try {
             progressCall = client.newCall(request);
             Response response = progressCall.execute();

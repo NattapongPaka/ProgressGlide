@@ -39,7 +39,7 @@ dependencies {
     compile 'jp.wasabeef:glide-transformations:2.0.0'
 
     //OkHttp 3.x
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    //compile 'com.squareup.okhttp3:okhttp:3.2.0'
 
     //Material design progress wheel
     compile 'com.pnikosis:materialish-progress:1.7'

@@ -1,6 +1,5 @@
 package com.frank.progressglide.activity;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -8,8 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.menu.ActionMenuItemView;
 import android.view.View;
+import android.view.ViewStub;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -17,9 +16,6 @@ import android.widget.ProgressBar;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.Request;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SizeReadyCallback;
 import com.bumptech.glide.request.target.Target;
 import com.frank.progressglide.R;
 import com.frank.progressglide.model.ConfigSingleton;
@@ -37,6 +33,8 @@ import timber.log.Timber;
 
 public class Example1 extends AppCompatActivity {
 
+
+    private ViewStub viewStub;
     private FloatingActionButton floatingActionButton;
     private ImageView imageView;
     private FrameLayout frameLayout;
@@ -47,16 +45,19 @@ public class Example1 extends AppCompatActivity {
     private ProgressBar progressBarExample1;
     private ProgressWheel progress_wheel;
     private final MainHandler mainHandler = new MainHandler(this);
+    private View view;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.example1);
 
-        floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+        viewStub = (ViewStub) findViewById(R.id.viewStub);
+        view = viewStub.inflate();
         imageView = (ImageView) findViewById(R.id.imageViewExample1);
-        frameLayout = (FrameLayout) findViewById(R.id.frameLayoutExample1);
-        progress_wheel = (ProgressWheel) findViewById(R.id.progress_wheel);
+
+        floatingActionButton = (FloatingActionButton)view. findViewById(R.id.fab);
+        progress_wheel = (ProgressWheel)view.findViewById(R.id.progress_wheel);
 
         ConfigSingleton.getInstantce().setUser_id("571a594c462928c15b8b4569");
         ProgressListener progressListener = new ProgressListener() {
@@ -75,6 +76,7 @@ public class Example1 extends AppCompatActivity {
                         progress_wheel.setProgress(progressf / 100);
                         if (done) {
                             //progressBarExample1.setProgress(100);
+                            viewStub.setVisibility(View.GONE);
                             progress_wheel.setProgress(1.0f);
                             Timber.d("Done loading");
                         }
@@ -96,7 +98,7 @@ public class Example1 extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Glide.clear(target);
             }
         });
     }

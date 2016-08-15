@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:wheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.Example1">
-
-    <FrameLayout
-        android:id="@+id/frameLayoutExample1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <!--<ImageButton-->
-        <!--android:layout_gravity="center"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@drawable/ic_close_grey_600_48dp"-->
-        <!--android:background="@android:color/transparent"-->
-        <!--android:id="@+id/imageButton" />-->
-    </FrameLayout>
 
     <ImageView
         android:id="@+id/imageViewExample1"
@@ -27,74 +12,52 @@
         android:layout_gravity="center"
         android:src="@drawable/appicon" />
 
-    <com.pnikosis.materialishprogress.ProgressWheel
-        android:id="@+id/progress_wheel"
+    <ViewStub
+        android:id="@+id/viewStub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        wheel:matProg_barColor="#BDBDBD"
-        wheel:matProg_barWidth="2dp"
-        wheel:matProg_circleRadius="65dp"
-        wheel:matProg_linearProgress="true"
-        wheel:matProg_progressIndeterminate="false"
-        wheel:matProg_rimColor="#AA757575"
-        wheel:matProg_rimWidth="2dp" />
+        android:layout="@layout/progressbar_fab_button" />
 
-    <android.support.design.widget.CoordinatorLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true">
+    <!--<android.support.design.widget.CoordinatorLayout-->
+        <!--android:id="@+id/coordinatorLayout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_centerInParent="true">-->
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:clickable="true"
-            android:src="@drawable/ic_close_grey_600_48dp"
-            fab:fabSize="normal"
-            fab:backgroundTint="#AAFFFFFF"
-            fab:rippleColor="@color/black"
-            />
-    </android.support.design.widget.CoordinatorLayout>
+        <!--<com.pnikosis.materialishprogress.ProgressWheel-->
+            <!--android:id="@+id/progress_wheel"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:visibility="gone"-->
+            <!--wheel:matProg_barColor="#BDBDBD"-->
+            <!--wheel:matProg_barWidth="2dp"-->
+            <!--wheel:matProg_circleRadius="63dp"-->
+            <!--wheel:matProg_linearProgress="true"-->
+            <!--wheel:matProg_progressIndeterminate="false"-->
+            <!--wheel:matProg_rimColor="#AA757575"-->
+            <!--wheel:matProg_rimWidth="2dp" />-->
 
-
-    <!--<FrameLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:id="@+id/frameLayoutProgress"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:visibility="visible"-->
-    <!--android:orientation="vertical">-->
-
-    <!--<com.dmitrymalkovich.android.ProgressFloatingActionButton-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--android:layout_width="56dp"-->
-    <!--android:layout_height="56dp"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:clickable="true">-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-    <!--android:layout_width="56dp"-->
-    <!--android:layout_height="56dp"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:src="@drawable/ic_close_green_a700_18dp" />-->
-
-    <!--<ProgressBar-->
-    <!--android:max="100"-->
-    <!--android:id="@+id/progressBarExample1"-->
-    <!--style="@style/Widget.AppCompat.ProgressBar"-->
-    <!--android:indeterminate="true"-->
-    <!--android:layout_width="56dp"-->
-    <!--android:layout_height="56dp"-->
-    <!--android:layout_gravity="center" />-->
-
-    <!--</com.dmitrymalkovich.android.ProgressFloatingActionButton>-->
-    <!--</FrameLayout>-->
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/fab"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:clickable="true"-->
+            <!--android:src="@drawable/ic_close_grey_600_48dp"-->
+            <!--android:visibility="gone"-->
+            <!--fab:backgroundTint="#AAFFFFFF"-->
+            <!--fab:borderWidth="0dp"-->
+            <!--fab:elevation="4dp"-->
+            <!--fab:fabSize="normal"-->
+            <!--fab:layout_anchor="@id/progress_wheel"-->
+            <!--fab:layout_anchorGravity="center"-->
+            <!--fab:rippleColor="#AA757575" />-->
+    <!--</android.support.design.widget.CoordinatorLayout>-->
 
 </RelativeLayout>
